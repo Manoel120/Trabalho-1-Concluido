@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarala', sans-serif;
+    font-size: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: beige;
+    color: #65113A;
+}
+
+.cabecalho-imagem {
+    border-radius: 50%;
+}
+
+.cabecalho {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0 24px;
+    align-items: center;  
+    justify-content: space-between;
+    background-color: #65113A;
+}
+
+.cabecalho-menu :hover{
+    color: black;
+}
+
+.cabecalho-menu {
+    text-transform: uppercase;
+    font-weight: bold;
+    grid-template-areas: 'Hospedagens Localização Reservas';
+    display: grid;
+    grid-gap: 60px;
+    text-decoration: none;
+    padding: 50px;
+}
+
+.cabecalho-menu-item {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.cabecalho-menu-item[href='#hospedagens'] {
+    grid-area: Hospedagens;
+}
+
+.cabecalho-menu-item[href='#localização'] {
+    grid-area: Localização;
+}
+
+.cabecalho-menu-item[href='#reservas'] {
+    grid-area: Reservas;
+}
+
+.titulo {
+    text-align: center;
+    padding: 30px 0;
+}
+
+#locdesc{
+    padding: 30px 0;
+}
+
+.underlinetitulo{
+    text-decoration: underline;
+}
+
+.conteudo {
+    padding: 0 50px;
+}
+
+.resumo {
+    display: grid;
+    grid-template-areas:    'titulo1 titulo1 titulo1'
+                            'imagem1 imagem2 imagem3'
+                            'titulo2 titulo2 titulo2'
+                            'esquerda centro direita'
+                            'hospedagem hospedagem hospedagem'
+                            'quarto1 quarto2 quarto3'
+                                'mesa mesa mesa'   
+                                 'loc loc loc';
+    max-width: 100%;
+    grid-gap: 50px;
+}
+
+.imagem {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.imagem > img {
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: transform .5s ease;
+}
+
+.imagem > img:hover {
+    transform: scale(1.1);
+}
+.titulo1 {
+    grid-area: titulo1
+}
+.titulo2 {
+    grid-area: titulo2;
+}
+.imagem1 {
+    grid-area: imagem1;
+}
+.imagem2 {
+    grid-area: imagem2;
+}
+.imagem3 {
+    grid-area: imagem3;
+}
+
+.esquerda {
+    grid-area: esquerda;
+}
+.centro {
+    grid-area: centro;
+}
+.direita {
+    grid-area: direita;
+}
+
+.hospedagem{
+    grid-area: hospedagem;
+}
+.quarto1{
+    grid-area: quarto1;
+}
+
+.quarto2{
+    grid-area: quarto2;
+}
+
+.quarto3{
+    grid-area: quarto3;
+}
+
+.texto1{
+    grid-area: texto1;
+}
+
+.mesa{
+    grid-area: mesa;
+    border: 1px solid black;
+    padding: 2px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    margin: auto;    
+}
+
+.formulario{
+    margin: auto;
+    vertical-align: auto;
+    width: 20vw;
+    height: 30vh;
+    justify-content: left;
+    padding: 15px 0; 
+}
+
+td{
+    border: 1px solid black;
+    padding: 4px;
+}
+
+.resumo img {
+    width: 100%;
+}
+
+.frame{
+    height: 40vh;
+    width: 80vw;
+    padding: 20px 30px;
+    grid-area: frame;
+}
+
+.conteudo-footer {
+    color: white;
+}
+
+
+footer {
+    padding-top: 60px;
+    text-align: center;
+    height: 150px;
+    background-color: #65113A;
+}
+
+@media only screen and (max-width:  576px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+    .cabecalho-menu {
+        grid-template-areas:    'Hospedagens Hospedagens'
+                                'Localização Localização'
+                                'Reservas Reservas';
+    }
+
+    
+    body {
+      background-color: white;
+      color: black;
+    }
+    .resumo {
+        grid-template-areas:    'titulo1 titulo1'
+                                'titulo2 titulo2'
+                                'imagem1 imagem1'
+                                'esquerda esquerda'
+                                'imagem2 imagem2'
+                                'centro centro'
+                                'imagem3 imagem3'
+                                'direita direita'
+                                'hospedagem hospedagem'
+                                'texto1 texto1'
+                                'quarto1 quarto1'
+                                'quarto2 quarto2'
+                                'quarto3 quarto3'
+                                'mesa mesa'
+                                'frame frame';
+                                
+                                padding: 30px 0;}
+    
+  }
